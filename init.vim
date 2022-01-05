@@ -114,7 +114,11 @@ set clipboard=unnamed
 
 " プラグイン
 call plug#begin()
-Plug 'ntk148v/vim-horizon'
+  Plug 'ntk148v/vim-horizon'
+  Plug 'preservim/nerdtree'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'sheerun/vim-polyglot'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " vim-horizonの設定開始
@@ -125,3 +129,9 @@ colorscheme horizon
 let g:lightline = {}
 let g:lightline.colorscheme = 'horizon'
 " vim-horizonの設定終了
+
+" nerdtreeの設定開始
+" " Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" nerdtreeの設定終了
