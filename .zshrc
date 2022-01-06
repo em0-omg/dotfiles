@@ -11,7 +11,7 @@ export ANDROID_SDK=/Users/em0/Library/Android/sdk
 export PATH=/Users/em0/Library/Android/sdk/platform-tools:$PATH
 export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
-export SAVEHIST=~100000
+export SAVEHIST=100000
 
 # Aliases
 alias vi="nvim"
