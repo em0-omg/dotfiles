@@ -9,7 +9,9 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH=$PATH:/opt/gradle/gradle-6.8.3/bin
 export ANDROID_SDK=/Users/em0/Library/Android/sdk
 export PATH=/Users/em0/Library/Android/sdk/platform-tools:$PATH
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=~100000
 
 # Aliases
 alias vi="nvim"
@@ -25,6 +27,8 @@ setopt hist_ignore_dups
 setopt share_history
 setopt inc_append_history
 
+# Auto Suggestions Setting
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # tabtab source for packages
 # uninstall by removing these lines
